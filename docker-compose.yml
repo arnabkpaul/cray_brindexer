@@ -1,0 +1,14 @@
+#minimal compose template
+version: '3'
+
+services:
+           
+ brindexer:
+   build: 
+       context: ./
+       dockerfile: ./Dockerfile
+   image: dtr.dev.cray.com/bwang/brindexer
+   volumes:
+    - .:/app
+   ports:
+     - "8080:8080"
